@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 // import BlogIndex from "./pages/blog/BlogIndex";
 // import BlogPost from "./pages/blog/BlogPost";
-// import Admin from "./pages/Admin";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
