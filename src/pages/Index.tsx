@@ -2,6 +2,12 @@ import { ArrowDown, Code, FileText, Lightbulb, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -11,13 +17,17 @@ const Index = () => {
           Hi, I'm{" "}
           <span className="text-blue-500 animate-pulse-glow">Abhinav</span>
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12">
+        {/* <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12">
           A curious <span className="text-foreground font-medium">maker</span>{" "}
           and{" "}
           <span className="text-foreground font-medium">
             intellectual nomad
           </span>{" "}
           crafting thoughtful digital experiences
+        </p> */}
+        <p className="text-xl md:text-2xl text-foreground max-w-2xl mb-12">
+          I don't invent much. But give me a real problem, and I'll build
+          something that makes a difference.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -40,17 +50,24 @@ const Index = () => {
           <FeatureCard
             icon={<Code className="text-blue-500" size={32} />}
             title="Developer"
-            description="Building innovative projects using AI, Quantum Computing, IoT, and more."
+            description="I like building things that solve problems.
+Sometimes that means using AI, sometimes it's IoT or even Quantum Computing.
+Whatever the tech, I'm here to make it work — and make it useful."
           />
           <FeatureCard
             icon={<Lightbulb className="text-pink-500" size={32} />}
             title="Experimenter"
-            description="Exploring hardware, music gear, education and countless other fields."
+            description="I jump between ideas — hardware, music gear, education, whatever pulls me in.
+Not everything sticks, but I always learn something.
+That’s kind of the point."
           />
           <FeatureCard
             icon={<FileText className="text-purple-500" size={32} />}
-            title="Writer"
-            description="Crafting poems, mental health reflections, and technical articles."
+            title="Writer(sort of)"
+            description="I wrote a poem once. Might write more, might not.
+I'm not here to be a writer — I'm just figuring things out, one post at a time.
+
+"
           />
         </div>
       </section>
@@ -65,7 +82,7 @@ const Index = () => {
           </p>
           <Button asChild className="bg-blue-500 hover:bg-blue-600">
             <a
-              href="mailto:abhinav@example.com"
+              href="mailto:abhinav.hari_ug2023@ashoka.edu.in"
               className="inline-flex items-center gap-2"
             >
               <Mail size={16} />
@@ -78,7 +95,7 @@ const Index = () => {
   );
 };
 
-const FeatureCard = ({ icon, title, description }) => {
+const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   return (
     <div className="glassmorphism rounded-lg p-6 transition-all hover:glow">
       <div className="mb-4">{icon}</div>

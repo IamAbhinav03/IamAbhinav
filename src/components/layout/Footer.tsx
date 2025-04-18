@@ -13,7 +13,7 @@ export const Footer = () => {
 
           <div className="flex space-x-4">
             <a
-              href="https://github.com/abhinavhari"
+              href="https://github.com/IamAbhinav03"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-electric-blue transition-colors"
@@ -22,7 +22,7 @@ export const Footer = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/abhinavhari"
+              href="https://www.linkedin.com/in/abhinav-m-hari-7b8882159/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-electric-blue transition-colors"
@@ -31,7 +31,7 @@ export const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:abhinav@example.com"
+              href="mailto:abhinav.hari_ug2023@ashoka.edu.in"
               className="text-muted-foreground hover:text-electric-blue transition-colors"
               aria-label="Email"
             >
