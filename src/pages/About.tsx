@@ -55,6 +55,81 @@ const About = () => {
     "Teaching & Mentoring": <Palette size={32} />,
   };
 
+  const workExperience = [
+    {
+      title: "Teaching Assistant, Lodha Genius Programme",
+      duration: "May 2024 – December 2024",
+      location: "On-site/Online",
+      description: [
+        "Assisted Professor Sai Krishna Mulpuru in teaching Robotics and AI & IoT courses.",
+        "Collaborated on designing and developing comprehensive course structures.",
+        "Facilitated student engagement by addressing doubts and offering individualized support.",
+        "Assisted students with projects like mini Wall-E, Otto bot, automated pet feeder, and Smart Home systems and more",
+      ],
+    },
+    {
+      title: "Summer Intern, Ashoka Mphasis Makerspace Lab",
+      duration: "June 2024 – August 2024",
+      location: "On-site",
+      description: [
+        "Developed a hardware-based random number generator using chaotic pendulums.",
+        "Designed and fabricated pendulums using advanced woodworking techniques.",
+        "Implemented computer vision algorithms to track pendulum motion for data collection.",
+        "Gained expertise in 3D printing for prototyping and enhancing project components.",
+      ],
+    },
+    {
+      title: "Research Intern, Dr. Prathiba Vargheese",
+      duration: "July 2021 – August 2022",
+      location: "Remote",
+      description: [
+        "Contributed to research on deep learning architectures using hexagonal convolutions.",
+        "Designed experiments, optimized hyperparameters, and evaluated model performance.",
+        "Generated insightful reports to communicate findings effectively.",
+      ],
+    },
+    {
+      title: "Backend Developer, Skilljag",
+      duration: "May 2021 – October 2022",
+      location: "Remote",
+      description: [
+        "Architected and developed the backend using Django and PostgreSQL.",
+        "Curated RESTful APIs ensuring efficient data management and performance.",
+        "Collaborated on UI/UX design iterations to enhance user experience.",
+      ],
+    },
+    {
+      title: "Intern, QWorld",
+      duration: "July 2021 – August 2021",
+      location: "Remote",
+      description: [
+        "Researched financial portfolio optimization techniques using RNNs and Quantum Machine Learning.",
+        "Implemented RNN architectures and conducted experiments to evaluate performance.",
+        "Generated reports and visualizations to communicate findings effectively.",
+      ],
+    },
+    {
+      title: "TinkerHub Learning Facilitator",
+      duration: "October 2022 – April 2023",
+      location: "Remote",
+      description: [
+        "Designed and delivered engaging Python workshops for students.",
+        "Created structured roadmaps and learning materials to guide students' Python journey.",
+        "Promoted STEM education through blog content creation and community engagement.",
+      ],
+    },
+    {
+      title: "Python Mentor, Pygrammers",
+      duration: "May 2021 – June 2021",
+      location: "Remote",
+      description: [
+        "Assisted learners in understanding core Python concepts and solving challenges.",
+        "Provided feedback on code quality and best practices.",
+        "Mentored individuals in developing real-world Python projects.",
+      ],
+    },
+  ];
+
   return (
     <div className="container mx-auto px-4 py-12">
       <motion.h1
@@ -86,7 +161,7 @@ const About = () => {
               active={activeSection === "work"}
               onClick={() => setActiveSection("work")}
               icon={<Code size={18} />}
-              label="What I Do"
+              label="Work Experience"
             />
             <TabButton
               active={activeSection === "education"}
@@ -148,31 +223,31 @@ const About = () => {
           {activeSection === "work" && (
             <div>
               <h2 className="text-2xl font-bold mb-6 text-electric-blue">
-                What I Do
+                Work Experience
               </h2>
               <motion.div
-                className="space-y-4 text-lg"
+                className="space-y-6"
                 initial="hidden"
                 animate="visible"
                 variants={container}
               >
-                <motion.p variants={item}>
-                  As a fast learner with an insatiable curiosity, I've explored
-                  various fields including AI, Quantum Computing, IoT, and
-                  hardware-based randomness. I don't just learn about these
-                  technologies—I build with them.
-                </motion.p>
-                <motion.p variants={item}>
-                  My approach combines deep technical knowledge with a creative
-                  mindset. I believe the most interesting innovations happen at
-                  the intersection of different disciplines.
-                </motion.p>
-                <motion.p variants={item}>
-                  My experience as a teaching assistant has also given me a deep
-                  appreciation for collaboration and knowledge sharing. I enjoy
-                  breaking down complex concepts and working with others to
-                  solve challenging problems.
-                </motion.p>
+                {workExperience.map((job, index) => (
+                  <motion.div
+                    key={index}
+                    className="glassmorphism bg-secondary/50 rounded-lg p-6"
+                    variants={item}
+                  >
+                    <h3 className="text-xl font-bold">{job.title}</h3>
+                    <p className="text-muted-foreground">
+                      {job.duration} | {job.location}
+                    </p>
+                    <ul className="list-disc ml-6 mt-4 space-y-2">
+                      {job.description.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
               </motion.div>
             </div>
           )}

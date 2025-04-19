@@ -1,6 +1,7 @@
 import { ArrowDown, Code, FileText, Lightbulb, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -9,8 +10,22 @@ interface FeatureCardProps {
 }
 
 const Index = () => {
+  const [showPopup, setShowPopup] = useState(true);
+
   return (
     <div className="min-h-screen">
+      {showPopup && (
+        <div className="fixed top-0 left-0 w-full bg-blue-500 text-white text-center py-3 z-50">
+          🚧 This website is still under construction! Thanks for your patience.
+          🚀
+          <button
+            onClick={() => setShowPopup(false)}
+            className="ml-4 bg-white text-blue-500 px-2 py-1 rounded hover:bg-gray-200"
+          >
+            Dismiss
+          </button>
+        </div>
+      )}
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center justify-center text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">

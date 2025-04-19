@@ -101,47 +101,44 @@ const projects = [
       "An AI-powered waste classification system recognized by Intel & NeGD. Helps users identify how to properly dispose of waste items.",
     image:
       "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["TensorFlow", "Computer Vision", "React", "Flask"],
-    demoLink: "https://green-ai-classifier.netlify.app",
-    githubLink: "https://github.com/abhinavhari/green",
+    technologies: ["Pytorch", "Computer Vision", "Django", "OpenCv", "ResNet"],
+    githubLink: "https://github.com/IamAbhinav03/Green_V3",
   },
   {
     title: "Hardware Random Number Generator",
     description:
-      "A truly random number generator using double pendulum chaos and computer vision to capture entropy from a physical system.",
+      "A truly random number generator using double pendulum chaos and computer vision to capture entropy from a physical system. Summer 2024 internship project with Makerspace Ashoka. Still work in progress",
     image:
       "https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["OpenCV", "Python", "Hardware", "Chaos Theory"],
-    demoLink: "https://hardware-rng-demo.netlify.app",
-    githubLink: "https://github.com/abhinavhari/hardware-rng",
+    githubLink: "https://github.com/IamAbhinav03/Double-Pendulum",
   },
-  {
-    title: "Hexagonal Convolutions Research",
-    description:
-      "Research project on implementing and optimizing hexagonal convolutions for more efficient deep learning models.",
-    image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["PyTorch", "Deep Learning", "Research", "Computer Vision"],
-    githubLink: "https://github.com/abhinavhari/hex-convolutions",
-  },
-  {
-    title: "Skilljag Backend Development",
-    description:
-      "Built a robust backend system for Skilljag using Django and PostgreSQL with a focus on API architecture and performance.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Django", "PostgreSQL", "REST API", "AWS"],
-    githubLink: "https://github.com/abhinavhari/skilljag-backend",
-  },
-  {
-    title: "Quantum Finance Comparison",
-    description:
-      "Research comparing the performance of Recurrent Neural Networks vs Variational Quantum Eigensolvers in financial prediction tasks.",
-    image:
-      "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Qiskit", "TensorFlow", "Finance", "Quantum Computing"],
-    githubLink: "https://github.com/abhinavhari/quantum-finance",
-  },
+  // {
+  //   title: "Hexagonal Convolutions Research",
+  //   description:
+  //     "Research project on implementing and optimizing hexagonal convolutions for more efficient deep learning models.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  //   technologies: ["PyTorch", "Deep Learning", "Research", "Computer Vision"],
+  //   githubLink: "https://github.com/abhinavhari/hex-convolutions",
+  // },
+  // {
+  //   title: "Skilljag Backend Development",
+  //   description:
+  //     "Built a robust backend system for Skilljag using Django and PostgreSQL with a focus on API architecture and performance.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  //   technologies: ["Django", "PostgreSQL", "REST API", "AWS"],
+  // },
+  // {
+  //   title: "Quantum Finance Comparison",
+  //   description:
+  //     "Research comparing the performance of Recurrent Neural Networks vs Variational Quantum Eigensolvers in financial prediction tasks.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  //   technologies: ["Qiskit", "TensorFlow", "Finance", "Quantum Computing"],
+  //   githubLink: "https://github.com/abhinavhari/quantum-finance",
+  // },
 ];
 
 export default Projects;
