@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   BadgeCheck,
   Github,
@@ -42,7 +42,7 @@ const About = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const skillIcons: Record<string, JSX.Element> = {
+  const skillIcons: Record<string, React.JSX.Element> = {
     "Artificial Intelligence": <Brain size={32} />,
     "Quantum Computing": <Cpu size={32} />,
     "IoT & Hardware": <Server size={32} />,
@@ -374,7 +374,7 @@ const About = () => {
 interface TabButtonProps {
   active: boolean;
   onClick: () => void;
-  icon: JSX.Element;
+  icon: React.JSX.Element;
   label: string;
 }
 
